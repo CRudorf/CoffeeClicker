@@ -1,0 +1,27 @@
+.clickerTitle {
+    font-family: 'DotGothic16', sans-serif;
+    font-size: 40px;
+    padding: 10px;
+}
+.navBar {
+    background-color: #F5DEB3;
+    font-family: 'DotGothic16', sans-serif;
+    ;
+}
+
+a.navBar {
+    display: block;
+    text-align: center;
+    padding: 2px;
+    border: 5px;
+    color: white;
+}
+
+
+#coffeeTracker {
+    background-color: #F5DEB3;
+    font-family: 'DotGothic16', sans-serif;
+}
+body {
+    background-color: #DEB887;
+}
