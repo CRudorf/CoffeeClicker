@@ -35,6 +35,6 @@ def create_app(config_paths: Iterable[Union[str, Path]] = None, **config_overrid
     # Filters
 
     # View blueprints
-    app.register_blueprint(views.index.bp, url_prefix='/index')
+    app.register_blueprint(views.index.bp)
 
     return app
