@@ -1,12 +1,13 @@
 var player = deepObjCopy(startPlayer);
 
 var startPlayer = {
-	money: 0.1,
+	money: 0.0,
 	moneyPerSecond: 0,
 	netMoneyPerSecond: 0,
 	moneyPerClick: 0.1,
 	clickPower: 1,
-	clickTracker : 0
+	clickTracker : 0,
+	totalMoneyEarned: 0
 }
 
 function addMoney(money) {
@@ -23,6 +24,7 @@ function moneyButtonClick(amount) {
 	addMoney(player.moneyPerClick * amount);
 	player.clickTracker += amount;
 	player.totalClicks += amount;
+	console.log(player.money);
 }
 
 function deepObjCopy (dupeObj) {
@@ -61,6 +63,3 @@ $(document).ready(function(){
 });
 
 // document.getElementById("money").innerHTML = player.money;
-$("#money").val(player.money);
-
-console.log(player.money);
