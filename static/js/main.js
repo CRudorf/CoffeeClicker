@@ -1,5 +1,3 @@
-var player = deepObjCopy(startPlayer);
-
 var startPlayer = {
 	money: 0.1,
 	moneyPerSecond: 0,
@@ -8,6 +6,8 @@ var startPlayer = {
 	clickPower: 1,
 	clickTracker : 0
 }
+
+var player = deepObjCopy(startPlayer);
 
 function addMoney(money) {
 	player.money = Math.round((player.money + money) * 100) / 100;
@@ -48,6 +48,7 @@ function deepObjCopy (dupeObj) {
 }
 
 function init(){
+	var savegame = JSON.parse(localStorage.getItem("save"));
 	player = deepObjCopy(startPlayer);
 	$("#money").html(player.money)
 };
